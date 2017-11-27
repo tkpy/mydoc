@@ -71,25 +71,7 @@ htop  查看后台运行进程
 	github克隆命令
 	git clone https://github.com/tkpy/tk.git
 
-修改linux的mysql密码
-----------------------
-	方法一：
-	^^^^^^^^^^
-	在mysql系统外，使用mysqladmin
-	# mysqladmin -u root -p password "test123"
-	Enter password: 【输入原来的密码】
-
-	方法二：
-	^^^^^^^^^^^^^
-	通过登录mysql系统，
-	# mysql -uroot -p
-	Enter password: 【输入原来的密码】
-	mysql>use mysql;
-	mysql> update user set password=passworD("test") where user='root';
-	mysql> flush privileges;
-	mysql> exit;   
-
-
+ 
 scrapy   参考文件: http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/settings.html
 
 Slphinx  使用手册: https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html

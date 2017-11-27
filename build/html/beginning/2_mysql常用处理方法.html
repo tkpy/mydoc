@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>入门篇 &mdash; Note 0.1 documentation</title>
+  <title>修改linux的mysql密码 &mdash; Note 0.1 documentation</title>
   
 
   
@@ -35,9 +35,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Note 0.1 documentation" href="../index.html"/>
-        <link rel="next" title="1. redis-scrapy详情" href="1_redis_scrapy详情.html"/>
-        <link rel="prev" title="Welcome to Note’s documentation!" href="../index.html"/> 
+    <link rel="top" title="Note 0.1 documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -91,11 +89,8 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">入门篇</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="1_redis_scrapy详情.html">1. redis-scrapy详情</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">入门篇</a></li>
 </ul>
 
             
@@ -140,13 +135,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>入门篇</li>
+      <li>修改linux的mysql密码</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/beginning/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/beginning/2_mysql常用处理方法.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -159,14 +154,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>入门篇<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>这一部分主要介绍数据科学的入门内容;包含数据科学的基础工具，如：Jupyter、Linux，以及 Python 基本的数据科学包 Numpy，画图包 Matplotlib;</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="1_redis_scrapy详情.html">1. redis-scrapy详情</a></li>
-</ul>
-</div>
+  <div class="section" id="linuxmysql">
+<h1>修改linux的mysql密码<a class="headerlink" href="#linuxmysql" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>方法一：
+在mysql系统外，使用mysqladmin
+#&nbsp;mysqladmin -u root -p password “test123”
+Enter password: 【输入原来的密码】</p>
+<p>方法二：
+通过登录mysql系统，</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>::</dt>
+<dd>#&nbsp;mysql -uroot -p
+Enter password: 【输入原来的密码】
+mysql&gt;use mysql;
+mysql&gt;&nbsp;update user set password=passworD(“test”) where user=’root’;
+mysql&gt;&nbsp;flush privileges;
+mysql&gt;&nbsp;exit;</dd>
+</dl>
 </div>
 
 
@@ -176,15 +182,6 @@
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="1_redis_scrapy详情.html" class="btn btn-neutral float-right" title="1. redis-scrapy详情" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../index.html" class="btn btn-neutral" title="Welcome to Note’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

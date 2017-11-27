@@ -93,10 +93,7 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">入门篇</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1. redis-scrapy详情</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#linuxmysql">1.1. 修改linux的mysql密码</a></li>
-</ul>
-</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. redis-scrapy详情</a></li>
 </ul>
 </li>
 </ul>
@@ -223,23 +220,8 @@ nohup python3 main.py &gt;info.log &amp;</p>
 <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">tkpy</span><span class="o">/</span><span class="n">tk</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
-<div class="section" id="linuxmysql">
-<h2>1.1. 修改linux的mysql密码<a class="headerlink" href="#linuxmysql" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p>在mysql系统外，使用mysqladmin
-#&nbsp;mysqladmin -u root -p password “test123”
-Enter password: 【输入原来的密码】</p>
-<p>通过登录mysql系统，
-#&nbsp;mysql -uroot -p
-Enter password: 【输入原来的密码】
-mysql&gt;use mysql;
-mysql&gt;&nbsp;update user set password=passworD(“test”) where user=’root’;
-mysql&gt;&nbsp;flush privileges;
-mysql&gt;&nbsp;exit;</p>
-</div></blockquote>
 <p>scrapy   参考文件: <a class="reference external" href="http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/settings.html">http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/settings.html</a></p>
 <p>Slphinx  使用手册: <a class="reference external" href="https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html">https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html</a></p>
-</div>
 </div>
 
 
