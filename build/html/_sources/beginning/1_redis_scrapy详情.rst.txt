@@ -58,17 +58,19 @@ nohup python3 main.py >info.log &
 htop  查看后台运行进程
 
 
-
-
-
 :: 
 
 	# 将.rst文件生成我的网页文档html
 	./make.bat html
-	github上传文件命令
+
+	github 上传文件命令或者更新文件
 	git add .
 	git commit -m .
 	git push origin_doc master
 
+	github克隆命令
+	git clone https://github.com/tkpy/tk.git
 
 scrapy   参考文件: http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/settings.html
+
+Slphinx  使用手册: https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html
