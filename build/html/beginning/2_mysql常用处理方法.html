@@ -165,22 +165,19 @@
   <div class="section" id="linuxmysql">
 <h1>2. 修改linux的mysql密码<a class="headerlink" href="#linuxmysql" title="Permalink to this headline">¶</a></h1>
 <blockquote>
-<div><p>方法一：
-在mysql系统外，使用mysqladmin
+<div><p>在mysql系统外，使用mysqladmin
 #&nbsp;mysqladmin -u root -p password “test123”
 Enter password: 【输入原来的密码】</p>
-<p>方法二：
-通过登录mysql系统，</p>
+<p>通过登录mysql系统，</p>
 </div></blockquote>
-<dl class="docutils">
-<dt>::</dt>
-<dd>#&nbsp;mysql -uroot -p
+<div class="highlight-default"><div class="highlight"><pre><span></span># mysql -uroot -p
 Enter password: 【输入原来的密码】
 mysql&gt;use mysql;
-mysql&gt;&nbsp;update user set password=passworD(“test”) where user=’root’;
-mysql&gt;&nbsp;flush privileges;
-mysql&gt;&nbsp;exit;</dd>
-</dl>
+mysql&gt; update user set password=passworD(&quot;test&quot;) where user=&#39;root&#39;;
+mysql&gt; flush privileges;
+mysql&gt; exit;
+</pre></div>
+</div>
 </div>
 
 

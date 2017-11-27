@@ -12,6 +12,7 @@ Welcome to Note's documentation!
    :glob:
 
    beginning/index
+   
 
 
 
