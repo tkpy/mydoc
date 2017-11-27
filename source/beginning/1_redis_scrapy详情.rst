@@ -61,4 +61,14 @@ htop  查看后台运行进程
 
 
 
+:: 
+
+	# 将.rst文件生成我的网页文档html
+	./make.bat html
+	github上传文件命令
+	git add .
+	git commit -m .
+	git push origin_doc master
+
+
 scrapy   参考文件: http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/settings.html
