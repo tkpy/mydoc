@@ -41,12 +41,15 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.githubpages']
 
 # Add any paths that contain templates here, relative to this directory.
+
+
 templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
-#
+# 如果用.md就没有索引目录
 # source_suffix = ['.rst', '.md']
+# 默认文件后缀名 用命令可以吧.rst文件生成HTML页面 , 有索引目录
 source_suffix = '.rst'
 
 # The master toctree document.
@@ -110,6 +113,7 @@ html_static_path = ['_static']
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
     '**': [
+
         'relations.html',  # needs 'show_related': True theme option to display
         'searchbox.html',
     ]
